@@ -23,7 +23,7 @@
         #menu {
             display: none;
             position: absolute;
-            top: 32px;
+            top: 43px;
             right: 10px;
             width: 100px;
             background-color: #f1f1f1;
@@ -97,6 +97,24 @@
         .twitch-img {
             width: 100%;
         }
+
+        .faqs-section {
+            display: flex;
+            align-items: center;
+            height: 300px;
+            justify-content: space-around;
+        }
+        .faq-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        footer {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
@@ -106,15 +124,15 @@
 
             <img class="principal-logo" src="./images//logo.left.png" alt="">
             <div class="container">
-                <button id="toggleButton" onclick="toggleMenu()">Click Me</button>
+                <button style="color: black !important;" id="toggleButton" onclick="toggleMenu()">Click Me</button>
                 <div id="menu">
-                    <p id="year2023">2023.v</p>
-                    <p id="year2019">2019.v</p>
+                    <a href="·" style="color: black !important;" id="year2023">2023.v</a>
+                    <a href="·" style="color: black !important;" id="year2019">2019.v</a>
                 </div>
             </div>
         </div>
         <div class="mid-container">
-            <img src="./images/logo.test.png" alt="">
+            <img src="./images/w.gif" width="500px" alt="">
             <h1>Bienvenido a la comunidad AWS UG PERU</h1>
             <p style="margin-bottom: 4rem;">Descripcion del grupo y cuales son sus objetivos del grupo .</p>
         </div>
@@ -167,15 +185,99 @@
             </div>
         </div>
         <hr>
-        <div>
-
+        <div class="faqs-section">
+            <div class="faq-left">
+                <p>Faqs</p>
+                <h2>Learn more about <br> AWS UG PERU</h2>
+            </div>
+            <div class="faq-right">
+                <select style="color: black; background-color: rgb(255, 255, 255);" >
+                    <option selected value="opcion1">¿Qué es AWS User Group Perú?</option>
+                    <option value="opcion2">Somos un grupo de entusiastas ... etc</option>
+                </select>
+                <select style="color: black; background-color: rgb(255, 255, 255);">
+                    <option selected value="opcion1">¿Qué es AWS User Group Perú?</option>
+                    <option value="opcion2">Somos un grupo de entusiastas ... etc</option>
+                </select>
+                <select style="color: black; background-color: rgb(255, 255, 255);">
+                    <option selected value="opcion1">¿Qué es AWS User Group Perú?</option>
+                    <option value="opcion2">Somos un grupo de entusiastas ... etc</option>
+                </select>
+                <select style="color: black; background-color: rgb(255, 255, 255);">
+                    <option selected value="opcion1">¿Qué es AWS User Group Perú?</option>
+                    <option value="opcion2">Somos un grupo de entusiastas ... etc</option>
+                </select>
+            </div>
         </div>
+        <hr>
+        <div class="wraper-twitch">
+            <p>News</p>
+            <div class="wraper-content">
+                <div class="cart-twitch">
+                    <img class="twitch-img" src="./images/twitch.jpg" alt="">
+                    <div class="inside-twitch">
+                        <p>
+                            Description of the youtube video or other
+                        </p>
+                        <a href="#twitch">Link</a>
+                    </div>
+                </div>
+                <div class="cart-twitch">
+                    <img class="twitch-img" src="./images/twitch.jpg" alt="">
+                    <div class="inside-twitch">
+                        <p>
+                            Description blog
+                        </p>
+                        <a href="#twitch">Link</a>
+                    </div>
+                </div>
+                <div class="cart-twitch">
+                    <img class="twitch-img" src="./images/twitch.jpg" alt="">
+                    <div class="inside-twitch">
+                        <p>
+                            Description post any red
+                        </p>
+                        <a href="#twitch">Link</a>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <hr>
+       <footer>
+        <div style="display: flex; justify-content: space-around; height: 90%; align-items: center;">
+
+            <div>
+                <div>
+                    <h1 style="padding-bottom: 1.2rem;">AWS UG PERU <br> Stay up to date with</h1>
+                    <div style="padding: .5rem 0;display: flex; flex-direction: column;">
+                        <input style="color: black;" type="text" placeholder="Email">
+                        <button style="color: black;" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                <div>
+                    <p style="padding-bottom: 1rem;">Follow AWS on social media</p>
+                    <div style="display: flex; gap: 2rem;">
+                        <p>ICO</p>
+                        <p>ICO</p>
+                        <p>ICO</p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <a href="">Terms and Conditions</a>
+                <a href="">Become a sponsor</a>
+            </div>
+        </div>
+        <div class="end">
+            <p>Privacy • Site Terms • Cookie Preferences • © 2023, Amazon Web Services, Inc. or its affiliates. All rights reserved.</p>
+        </div>
+       </footer>
     </div>
 
     <script>
-        var menu = document.getElementById("menu");
-        var year2023 = document.getElementById("year2023");
-        var year2019 = document.getElementById("year2019");
+        let menu = document.getElementById("menu");
+        let year2023 = document.getElementById("year2023");
+        let year2019 = document.getElementById("year2019");
 
         function toggleMenu() {
             if (menu.style.display === "none") {
